@@ -1,6 +1,7 @@
 import numpy as np
 import re
 import os
+import mne
 
 """
 This FileUtils.py module contains:
@@ -47,7 +48,7 @@ def create_input_file(data_path, drop_ch):
 	y = np.zeros((n_rec,1))
 
 	for file,rec in zip(text_file,range(len(text_file))):
-		data_file = EEG_path + '\\' + file
+		data_file = data_path + '\\' + file
 		EEG_data = mne.io.read_raw_fif(data_file, preload = True)
 		EEG_data.drop_channels(drop_ch)
 		tag = find_number(file,'tag')

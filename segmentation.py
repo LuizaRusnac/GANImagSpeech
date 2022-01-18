@@ -3,7 +3,7 @@ import mne
 import numpy as np
 import pandas as pd
 
-def data_segmentation(base_data_path, subjects, data_evidence)
+def data_segmentation(base_data_path, subjects, data_evidence):
 	for sub in range(len(subjects)):
 		subject = subjects[sub]
 		path = base_data_path + '\\' + subject
@@ -23,6 +23,6 @@ def data_segmentation(base_data_path, subjects, data_evidence)
 		    else:
 		        filename = 'imagined_speech_' + subject + '_' + str(i)  + '_tag' + str(subject_df[subject + '_tag'][i]) + '.raw.fif'
 		    
-		    os.chdir(r'C:\D\Doctorat\GANImagSpeech\DataBase')
+		    os.chdir(r'C:\Doctorat\GANImagSpeech\DataBase')
 		    imagined_speech = data.save(filename, tmin = subject_df[subject + '_start'][i]/1000, tmax = subject_df[subject + '_stop'][i]/1000)
 	    

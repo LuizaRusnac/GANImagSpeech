@@ -4,7 +4,7 @@ from FileUtils import split_leaveOneOut
 import preprocessing
 import featureExtr
 
-x, y = load_data("KaraOne_EEGSpeech_X_noLPF.npy","KaraOne_EEGSpeech_y_noLPF.npy")
+x, y = load_data("KaraOne_EEGSpeech_X.npy","KaraOne_EEGSpeech_y.npy")
 
 # sel_subjects = ['MM05', 'MM10', 'MM11', 'MM16', 'MM18', 'MM19', 'MM21', 'P02']
 # subj_idx_start = np.array([0, 120, 236, 362, 493, 603, 734, 864])
